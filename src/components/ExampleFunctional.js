@@ -4,7 +4,12 @@ const ExampleFunctional = () => {
   const [count, setCount] = useState(0);
 
   const handleClick = () => {
-    setCount(count + 1);
+    setCount((preState) => {
+      return preState + 1;
+    });
+    setCount((preState) => {
+      return preState + 1;
+    });
   };
   return (
     <div>
