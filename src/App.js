@@ -1,7 +1,9 @@
+import ExampleFunctional from "./components/ExampleFunctional";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <ExampleFunctional />
     </div>
   );
 }
