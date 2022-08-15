@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 
 const ExampleFunctional = () => {
-  const initialValues = () => {
-    let total = 0;
-    for (let i = 0; i < 100; i++) {
-      total += i;
-    }
-    console.log("initialValue");
-    return total;
-  };
-  const [count, setCount] = useState(() => {
-    return initialValues();
+  const [count, setCount] = useState(0);
+  const [user, setUser] = useState({
+    name: "test",
+    age: 12,
   });
 
   const handleClick = () => {
@@ -20,12 +14,15 @@ const ExampleFunctional = () => {
     setCount((preState) => {
       return preState + 1;
     });
+
+    setUser({ name: "updated" });
   };
   return (
     <div>
       <pre>Functional Component</pre>
       <p>You clicked {count} times</p>
       <button onClick={handleClick}>Click me</button>
+      <p>{JSON.stringify(user)}</p>
     </div>
   );
 };
