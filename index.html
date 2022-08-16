@@ -19,30 +19,15 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      const courses = [
-        {
-          id: 1,
-          name: "HTML, CSS",
-        },
-        {
-          id: 2,
-          name: "Responsive web design",
-        },
-        {
-          id: 3,
-          name: "ReactJS",
-        },
-      ];
-      const ul = (
-        <ul>
-          {courses.map((course) => (
-            <li key={course.id}>{course.name}</li>
-          ))}
-        </ul>
+      const jsx = (
+        <React.Fragment>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+        </React.Fragment>
       );
 
       // React-DOM -> render UI
-      ReactDOM.render(ul, document.getElementById("root"));
+      ReactDOM.render(jsx, document.getElementById("root"));
     </script>
   </body>
 </html>
