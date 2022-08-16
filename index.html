@@ -19,10 +19,25 @@
     <div id="root"></div>
 
     <script type="text/babel">
+      const courses = [
+        {
+          id: 1,
+          name: "HTML, CSS",
+        },
+        {
+          id: 2,
+          name: "Responsive web design",
+        },
+        {
+          id: 3,
+          name: "ReactJS",
+        },
+      ];
       const ul = (
         <ul>
-          <li>Javascript</li>
-          <li>ReactJS</li>
+          {courses.map((course) => (
+            <li key={course.id}>{course.name}</li>
+          ))}
         </ul>
       );
 
