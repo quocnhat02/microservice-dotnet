@@ -19,17 +19,18 @@
 
     <script>
       //   REACT
-      const h1 = React.createElement(
-        "h1",
-        { title: "Hello", className: "heading" },
-        "Hello guys!"
+      const ul = React.createElement(
+        "ul",
+        null,
+        React.createElement("li", null, "Javascript"),
+        React.createElement("li", null, "ReactJS")
       );
 
       //   Get root element
       const root = document.getElementById("root");
 
       // React-DOM -> render UI
-      ReactDOM.render(h1, root);
+      ReactDOM.render(ul, root);
     </script>
   </body>
 </html>
