@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReactJS</title>
     <script
-      src="https://unpkg.com/react@17/umd/react.development.js"
+      src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
     ></script>
     <script
-      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       crossorigin
     ></script>
   </head>
@@ -26,11 +26,9 @@
         React.createElement("li", null, "ReactJS")
       );
 
-      //   Get root element
-      const root = document.getElementById("root");
-
       // React-DOM -> render UI
-      ReactDOM.render(ul, root);
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(ul);
     </script>
   </body>
 </html>
