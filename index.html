@@ -13,27 +13,26 @@
   <body>
     <script>
       // DOM
-      const ulDOM = document.createElement("ul");
-      ulDOM.id = "ul-id";
-      ulDOM.style = "color: red; font-size: 30px";
-      const liDOM1 = document.createElement("li");
-      liDOM1.innerText = "JS";
-      const liDOM2 = document.createElement("li");
-      liDOM2.innerText = "REACT";
+      const divDOM = document.createElement("div");
+      divDOM.className = "post-item";
+      const h2DOM = document.createElement("h2");
+      h2DOM.title = "Hoc React tai F8";
+      h2DOM.innerText = "Hoc ReactJS";
+      const pDOM = document.createElement("p");
+      pDOM.innerText = "Hoc ReactJS tu co ban den nang cao";
 
-      ulDOM.appendChild(liDOM1);
-      ulDOM.appendChild(liDOM2);
+      divDOM.appendChild(h2DOM);
+      divDOM.appendChild(pDOM);
+      document.body.appendChild(divDOM);
 
-      document.body.appendChild(ulDOM);
-      //  React
-      const ulReact = React.createElement(
-        "ul",
+      //   REACT
+      const divReact = React.createElement(
+        "div",
         {
-          id: "ul-id",
-          style: "color: red; font-size: 30px",
+          className: "post-item",
         },
-        React.createElement("li", null, "JS"),
-        React.createElement("li", null, "REACT")
+        React.createElement("h2", { title: "Hoc React tai F8" }, "Hoc ReactJS"),
+        React.createElement("p", null, "Hoc ReactJS tu co ban den nang cao")
       );
     </script>
   </body>
