@@ -19,26 +19,29 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      function Header() {
-        return <div className="header">Header</div>;
+      // Post
+      function PostItem(props) {
+        return (
+          <div id="post-item">
+            <h2>{props.title}</h2>
+            <p>{props.description}</p>
+          </div>
+        );
       }
 
-      class Content extends React.Component {
-        render() {
-          return <div className="content">Content</div>;
-        }
+      //   App.js
+      function App() {
+        return (
+          <div id="wrapper">
+            <PostItem title="React1" description="Hoc React1" />
+            <PostItem title="React2" description="Hoc React2" />
+            <PostItem title="React3" description="Hoc React3" />
+          </div>
+        );
       }
 
-      const app = (
-        <div>
-          <Header />
-          <Content />
-          <div className="footer">Footer</div>
-        </div>
-      );
-
-      // React-DOM -> render UI
-      ReactDOM.render(app, document.getElementById("root"));
+      // index.js
+      ReactDOM.render(<App />, document.getElementById("root"));
     </script>
   </body>
 </html>
