@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 
-const gifts = ["CPU i9", "RAM 32GB RGB", "RGB Keyboard"];
-
 function App() {
-  const [gift, setGift] = useState();
-
-  const randomGift = () => {
-    const index = Math.floor(Math.random() * gifts.length);
-    setGift(gifts[index]);
-  };
+  const [name, setName] = useState("");
 
   return (
     <div className="App" style={{ padding: 30 }}>
-      <h1>{gift || "Chưa có phần thưởng"}</h1>
-      <button onClick={randomGift}>Lấy thưởng</button>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <button onClick={() => setName("Nguyen Van B")}>Change</button>
     </div>
   );
 }
