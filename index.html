@@ -19,23 +19,17 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      // Post
-      function PostItem(props) {
-        return (
-          <div id="post-item">
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
-          </div>
-        );
-      }
-
       //   App.js
       function App() {
         return (
           <div id="wrapper">
-            <PostItem title="React1" description="Hoc React1" />
-            <PostItem title="React2" description="Hoc React2" />
-            <PostItem title="React3" description="Hoc React3" />
+            <button
+              onClick={(e) => {
+                console.log(e.target);
+              }}
+            >
+              Click me
+            </button>
           </div>
         );
       }
