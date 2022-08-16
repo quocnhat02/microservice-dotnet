@@ -6,29 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReactJS</title>
     <script
-      src="https://unpkg.com/react@18/umd/react.development.js"
+      src="https://unpkg.com/react@17/umd/react.development.js"
       crossorigin
     ></script>
     <script
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
       crossorigin
     ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
   <body>
     <div id="root"></div>
 
-    <script>
-      //   REACT
-      const ul = React.createElement(
-        "ul",
-        null,
-        React.createElement("li", null, "Javascript"),
-        React.createElement("li", null, "ReactJS")
+    <script type="text/babel">
+      const ul = (
+        <ul>
+          <li>Javascript</li>
+          <li>ReactJS</li>
+        </ul>
       );
 
       // React-DOM -> render UI
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(ul);
+      ReactDOM.render(ul, document.getElementById("root"));
     </script>
   </body>
 </html>
