@@ -19,22 +19,23 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      //   App.js
+      const Form = {
+        Input() {
+          return <input />;
+        },
+        Checkbox() {
+          return <input type="checkbox" />;
+        },
+      };
+
       function App() {
         return (
           <div id="wrapper">
-            <button
-              onClick={(e) => {
-                console.log(e.target);
-              }}
-            >
-              Click me
-            </button>
+            <Form.Checkbox />
           </div>
         );
       }
 
-      // index.js
       ReactDOM.render(<App />, document.getElementById("root"));
     </script>
   </body>
