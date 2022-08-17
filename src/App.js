@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 function App() {
-  const [name, setName] = useState("");
+  const [counter, setCounter] = useState(1);
+
+  const handleIncrease = () => {
+    setCounter(counter + 1);
+  };
 
   return (
-    <div className="App" style={{ padding: 30 }}>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <button onClick={() => setName("Nguyen Van B")}>Change</button>
+    <div className="App">
+      <h1>{counter}</h1>
+      <button onClick={handleIncrease}>Click</button>
     </div>
   );
 }
