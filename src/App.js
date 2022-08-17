@@ -11,6 +11,7 @@ function App() {
 
   const handleUpdate = () => {
     setInfo({
+      ...info,
       bio: "Yeu dong vat",
     });
   };
