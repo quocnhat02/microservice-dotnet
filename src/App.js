@@ -10,10 +10,10 @@ function App() {
   });
 
   const handleUpdate = () => {
-    setInfo({
-      ...info,
+    setInfo((prevState) => ({
+      ...prevState,
       bio: "Yeu dong vat",
-    });
+    }));
   };
 
   return (
