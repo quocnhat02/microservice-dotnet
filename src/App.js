@@ -3,19 +3,22 @@ import React, { useState } from "react";
 const orders = [100, 200, 300];
 
 function App() {
-  const [counter, setCounter] = useState(() => {
-    let total = orders.reduce((total, cur) => total + cur);
-    console.log(total);
-    return total;
+  const [info, setInfo] = useState({
+    name: "Nguyen Van A",
+    age: 18,
+    address: "Ha Noi, VN",
   });
-  const handleIncrease = () => {
-    setCounter((prevState) => prevState + 1);
+
+  const handleUpdate = () => {
+    setInfo({
+      bio: "Yeu dong vat",
+    });
   };
 
   return (
     <div className="App" style={{ padding: 30 }}>
-      <h1>{counter}</h1>
-      <button onClick={handleIncrease}>Click</button>
+      <h1>{JSON.stringify(info)}</h1>
+      <button onClick={handleUpdate}>Update</button>
     </div>
   );
 }
