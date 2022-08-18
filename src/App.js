@@ -5,7 +5,12 @@ function App() {
   const [jobs, setJobs] = useState([]);
 
   const handleSubmit = () => {
-    setJobs((prev) => [...prev, job]);
+    setJobs((prev) => {
+      const newJobs = [...prev, job];
+      const jsonJobs = JSON.stringify(newJobs);
+      localStorage.setItem("jobs", jsonJobs);
+      return newJobs;
+    });
     setJob("");
   };
 
