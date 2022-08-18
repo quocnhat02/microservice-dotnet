@@ -1,25 +1,22 @@
 import React, { useState } from "react";
 
-const orders = [100, 200, 300];
+const RAM = ["8 GB", "16 GB", "32 GB"];
 
 function App() {
-  const [info, setInfo] = useState({
-    name: "Nguyen Van A",
-    age: 18,
-    address: "Ha Noi, VN",
-  });
+  const [ram, setRam] = useState(RAM[0]);
 
-  const handleUpdate = () => {
-    setInfo((prevState) => ({
-      ...prevState,
-      bio: "Yeu dong vat",
-    }));
+  const handleRAM = () => {
+    setRam(() => {
+      let index = Math.floor(Math.random() * RAM.length);
+      console.log(RAM[index]);
+      return RAM[index];
+    });
   };
 
   return (
     <div className="App" style={{ padding: 30 }}>
-      <h1>{JSON.stringify(info)}</h1>
-      <button onClick={handleUpdate}>Update</button>
+      <h1>{ram}</h1>
+      <button onClick={handleRAM}>Get</button>
     </div>
   );
 }
