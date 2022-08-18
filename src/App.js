@@ -1,33 +1,40 @@
 import React, { useState } from "react";
 
-function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+const courses = [
+  {
+    id: 1,
+    name: "HTML, CSS",
+  },
+  {
+    id: 2,
+    name: "Javascript",
+  },
+  {
+    id: 3,
+    name: "ReactJS",
+  },
+];
 
+function App() {
+  const [checked, setChecked] = useState(1);
   const handleSubmit = () => {
-    console.log({
-      name,
-      email,
-    });
+    console.log({ id: checked });
   };
 
-  console.log(name);
   return (
     <div className="App" style={{ padding: 30 }}>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-      />
-      <input
-        type="text"
-        value={email}
-        onChange={(e) => {
-          setEmail(e.target.value);
-        }}
-      />
+      {courses.map((course) => (
+        <div key={course.id}>
+          <input
+            type="radio"
+            id={course.id}
+            checked={checked === course.id}
+            onChange={() => setChecked(course.id)}
+          />
+          <label htmlFor={course.id}>{course.name}</label>
+        </div>
+      ))}
+
       <button onClick={handleSubmit}>Register</button>
     </div>
   );
