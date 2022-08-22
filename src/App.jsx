@@ -1,21 +1,15 @@
-import React, { useState } from "react";
-
-const Person = ({ firstName, lastName, age }) => {
-  return (
-    <>
-      <h1>FistName: {firstName}</h1>
-      <h1>LastName: {lastName}</h1>
-      <h1>Age: {age}</h1>
-    </>
-  );
-};
+import { useState } from "react";
 
 const App = () => {
+  const [counter, setCounter] = useState(0);
+
   return (
     <div className="App" style={{ padding: 30 }}>
-      <Person firstName="Nhat" lastName="Nguyen" age="20" />
-      <Person firstName="Thuan" lastName="Trieu" age="21" />
-      <Person firstName="Dai" lastName="Trieu" age="22" />
+      <button onClick={() => setCounter((prevCount) => prevCount - 1)}>
+        -
+      </button>
+      <h1>{counter}</h1>
+      <button>+</button>
     </div>
   );
 };
