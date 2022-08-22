@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <div className="App" style={{ padding: 30 }}>
-      <h1>Hello, {isNameShowing ? name : "someone"}</h1>
+      <h1>Hello, {!isNameShowing && name}</h1>
     </div>
   );
 };
