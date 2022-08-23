@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/quocnhat02/react-basic/issues"
   },
-  "homepage": "https://github.com/quocnhat02/react-basic#readme"
+  "homepage": "https://github.com/quocnhat02/react-basic#readme",
+  "dependencies": {
+    "redux": "^4.2.0"
+  }
 }
