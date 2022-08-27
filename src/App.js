@@ -5,11 +5,11 @@ import SearchBox from "./SearchBox";
 
 const App = () => {
   return (
-    <Fragment>
+    <div className="tc">
       <h1>Robot Friends</h1>
       <SearchBox />
       <CardList robots={robots} />
-    </Fragment>
+    </div>
   );
 };
 
