@@ -23,6 +23,12 @@ const App = () => {
   //     .then((robots) => this.setState({ robots }));
   // }
 
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((users) => setRobots(users));
+  }, []);
+
   const onSearchChange = (event) => {
     setSearchfield(event.target.value);
   };
