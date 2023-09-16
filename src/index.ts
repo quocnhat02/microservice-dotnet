@@ -1,14 +1,15 @@
-enum AgeUnit {
-  years = "years",
-  months = "months",
-}
+type Reservation = {
+  departureDate: Date;
+  returnDate: Date;
+  departingFrom: string;
+  destination: string;
+};
 
-type greetingFunction = (greeting: string) => string;
-
-type Person = {
-  name: string;
-  age: number;
-  ageUnit: AgeUnit;
-  country: string;
-  greet: greetingFunction;
+type Reserve = {
+  (
+    departureDate: Date,
+    returnDate: Date,
+    departingFrom: string,
+    destination: string,
+  ): Reservation;
 };
