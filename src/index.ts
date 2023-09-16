@@ -1,8 +1,8 @@
-let booleanValue: boolean = true;
-
-// Literal values
-booleanValue = false;
-
-// expression of true or false
-booleanValue = typeof "abc" === "string";
-booleanValue = 1 > 0;
+let car: {
+  color: string;
+  brand: string;
+  image?: string;
+} = {
+  color: "red",
+  brand: "bmw",
+};

@@ -7,3 +7,5 @@ function multiByTwo(number: unknown) {
 
 console.log(multiByTwo(5));
 console.log(multiByTwo("5"));
+
+export {};
