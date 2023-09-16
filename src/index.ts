@@ -1,9 +1,8 @@
-function multiByTwo(number: unknown) {
-  if (typeof number === "number") {
-    return number * 2;
-  }
-  return "Please provide a valid number";
-}
+let booleanValue: boolean = true;
 
-console.log(multiByTwo(5));
-console.log(multiByTwo("5"));
+// Literal values
+booleanValue = false;
+
+// expression of true or false
+booleanValue = typeof "abc" === "string";
+booleanValue = 1 > 0;
