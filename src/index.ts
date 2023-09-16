@@ -1,12 +1,13 @@
-type Article = {
-  author: string;
-  content: string;
-  title: string;
-  image?: string;
+type Caterer = {
+  name: string;
+  address: string;
+  phone: number;
 };
 
-let article: Article = {
-  author: "Nodejs",
-  content: "Hello World",
-  title: "My First Article",
+type Airplane = {
+  model: string;
+  flightNumber: string;
+  timeOfDeparture: Date;
+  timeOfArrival: Date;
+  caterer: Caterer;
 };
