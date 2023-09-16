@@ -1,7 +1,14 @@
-function intro(name: string, age: number): string {
-  return `My name is ${name} and age is ${age}`;
+enum AgeUnit {
+  years = "years",
+  months = "months",
 }
 
-const intro2 = (name: string, age: number): string => {
-  return `My name is ${name} and age is ${age}`;
+type greetingFunction = (greeting: string) => string;
+
+type Person = {
+  name: string;
+  age: number;
+  ageUnit: AgeUnit;
+  country: string;
+  greet: greetingFunction;
 };
