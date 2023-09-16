@@ -1,20 +1,24 @@
-type Cat = {
-  name: string;
-  purrs: boolean;
-  color: string;
+type Airplane = {
+  flightNumber: string;
+  airplaneModel: string;
+  dateOfDeparture: string;
+  timeOfDeparture: string;
+  from: string;
+  to: string;
+  seats: {
+    [key: string]: string;
+  };
 };
 
-type Dog = {
-  name: string;
-  bark: boolean;
-  color: string;
-};
-
-type HybridAnimal = Dog & Cat;
-
-const hybridAnimal: HybridAnimal = {
-  name: "Max",
-  color: "white",
-  bark: true,
-  purrs: false,
+const airplane: Airplane = {
+  flightNumber: "SG102",
+  airplaneModel: "A380",
+  dateOfDeparture: "01/01/2023",
+  timeOfDeparture: "23:10",
+  from: "JFK",
+  to: "DCA",
+  seats: {
+    "10A": "Mark Thomas",
+    "10B": "John Wick",
+  },
 };
