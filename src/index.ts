@@ -1,14 +1,15 @@
-let loggedInUsername: string;
+import { Roles } from "./roles";
 
-const users = [
-  { name: "Orgy", age: 18 },
-  { name: "Jack", age: 22 },
-];
+type Person = {
+  name: string;
+  email: string;
+  password: string;
+  role: Roles;
+};
 
-const loggedInUser = users.find((user) => user.name === loggedInUsername);
-
-let saveButton: HTMLElement | null = document.getElementById("save");
-
-if (saveButton !== null) {
-  // do something
-}
+const person: Person = {
+  name: "John",
+  email: "john@gmail.com",
+  password: "john123",
+  role: Roles.editor,
+};
