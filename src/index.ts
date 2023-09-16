@@ -1,8 +1,12 @@
-let car: {
-  color: string;
-  brand: string;
+type Article = {
+  author: string;
+  content: string;
+  title: string;
   image?: string;
-} = {
-  color: "red",
-  brand: "bmw",
+};
+
+let article: Article = {
+  author: "Nodejs",
+  content: "Hello World",
+  title: "My First Article",
 };
