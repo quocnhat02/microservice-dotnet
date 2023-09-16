@@ -1,8 +1,14 @@
-let number: readonly number[] = [1, 2, 3];
+let loggedInUsername: string;
 
-type readOnlyPerson = readonly [string, string, number];
+const users = [
+  { name: "Orgy", age: 18 },
+  { name: "Jack", age: 22 },
+];
 
-const person: readOnlyPerson = ["John", "Smith", 23];
+const loggedInUser = users.find((user) => user.name === loggedInUsername);
 
-type a = Readonly<string[]>;
-type b = Readonly<[string, string, number]>;
+let saveButton: HTMLElement | null = document.getElementById("save");
+
+if (saveButton !== null) {
+  // do something
+}
