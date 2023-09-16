@@ -1,30 +1,15 @@
-type Dog = {
-  name: string;
-  bark: boolean;
-  wags: boolean;
-};
+type StringOrNumber = number | string;
 
-type Cat = {
-  name: string;
-  purrs: boolean;
-};
+function addNumberOrString(
+  a: StringOrNumber,
+  b: StringOrNumber,
+): StringOrNumber {
+  if (typeof a === "number" && typeof b === "number") {
+    return a + b;
+  } else {
+    return a.toString() + b.toString();
+  }
+}
 
-type DogAndCatUnion = Dog | Cat;
-
-let dog: DogAndCatUnion = {
-  name: "Buddy",
-  bark: true,
-  wags: true,
-};
-
-let cat: DogAndCatUnion = {
-  name: "Bella",
-  purrs: true,
-};
-
-let dogAndCat: DogAndCatUnion = {
-  name: "Hybrid",
-  bark: true,
-  wags: false,
-  purrs: true,
-};
+console.log(addNumberOrString(5, 7));
+console.log(addNumberOrString("M", 10));
