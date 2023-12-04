@@ -1,8 +1,10 @@
+import styles from "./page.module.css"
+
 export default function Home() {
   return (
     <section>
       <div className='container'>
-        <h1 className='mt-4 text-3xl font-bold'>Hello World</h1>
+        <p className={`${styles.title}`}>Hello World</p>
       </div>
     </section>
   )

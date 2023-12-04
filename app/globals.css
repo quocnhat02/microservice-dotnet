@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+  .h1-bold {
+    @apply p-2 text-3xl font-bold tracking-wide text-red-500 shadow-lg;
+  }
+}
